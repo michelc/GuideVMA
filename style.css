@@ -1,0 +1,76 @@
+/* Thèmes
+   ========================================================================== */
+
+:root {
+    --fond-general: #fff;                   /* Fond blanc général */
+    --fond-leger: #eee;                     /* A peine plus foncé que le fond général */
+    --texte-normal: #333;                   /* Texte quasi noir */
+    --texte-clair: #888;                    /* Texte plus clair pour notes */
+    --texte-jouee: #fff;                    /* Texte blanc une fois la lettre jouée */
+    --filigrane: #ddd;                      /* Couleur du texte en filigrane */
+    --message-fond: #dc267f;                /* Fond mauve pour les messages */
+    --message-texte: #fff;                  /* Texte blanc pour les messages */
+    --touche-fond: #ccc;                    /* Fond gris clair pour touche inutilisée */
+    --touche-texte: #333;                   /* Texte quasi noir pour touche en général */
+    --fond-correct: #ffb000;                /* Orange pour les lettres bien placées */
+    --fond-present: #648fff;                /* Bleu pour les lettres mal placées */
+    --fond-absent: #ddd;                    /* Gris clair pour les lettres absentes */
+    --couleur-icone: #bbb;                  /* Gris pas très clair pour icones */
+    --texte-lien: #2962ff;                  /* Bleu pour les liens */
+    --bg-body: url(bg-light.png);
+}
+
+/* Layout
+========================================================================== */
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 100%; /* => 16 px */
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--fond-general);
+    color: var(--texte-normal);
+    /* Disables pull-to-refresh but allows overscroll glow effects. */
+    /* https://developers.google.com/web/updates/2017/11/overscroll-behavior */
+    overscroll-behavior-y: contain;
+}
+
+
+/* -- */
+  
+p {
+    text-align: center;
+}
+
+a, span {
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    padding: 2px 2px;
+    min-width: 30px;
+    text-decoration: none;
+}
+
+a {
+    background-color: var(--fond-present);
+    color: var(--fond-general);
+}
+
+span {
+    background-color: var(--texte-clair);
+    color: var(--fond-general);
+}
+
+.browse a, .browse span {
+    min-width: 100px;
+    border-radius: 15px;
+}

@@ -49,12 +49,13 @@ body {
   
 p {
     text-align: center;
+    line-height: 1.5;
 }
 
 a, span {
     border-radius: 50%;
     display: inline-block;
-    margin: 0 2px;
+    margin: 2px;
     padding: 2px 2px;
     min-width: 30px;
     text-decoration: none;
@@ -73,4 +74,8 @@ span {
 .browse a, .browse span {
     min-width: 100px;
     border-radius: 15px;
+}
+
+img {
+    max-width: 100%;
 }
